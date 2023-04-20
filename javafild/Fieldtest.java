@@ -12,7 +12,9 @@ class Student{
         return sage;
     }
 
-    public Student(){}
+    public Student(String sname){
+        this.sname = sname;
+    }
 
     public Student(String name, int age, char sex){
         this.sname = name;
@@ -28,6 +30,7 @@ class Student{
 
 public class Fieldtest {
     public static void main(String[] args) throws Exception{
+        Student student1 = new Student("abc");
         Class clazz = Class.forName("javafild.Student");
         Constructor constructor = clazz.getConstructor(String.class, int.class, char.class);
         System.out.println(constructor);
