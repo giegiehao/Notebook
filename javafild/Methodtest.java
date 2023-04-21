@@ -39,5 +39,15 @@ public class Methodtest {
         
         Object obj = clazz.getDeclaredConstructor().newInstance();//在没有定义构造函数时，默认的无参构造方法的权限限制符与该类的相同，在这里是默认的defoult;
         System.out.println(method.invoke(obj,null));
+
+        StudentMothod studentMothod = new StudentMothod();
+        System.out.println(studentMothod.method1().hashCode());
+//        System.out.println(method == studentMothod.method1());
+
+        Method method1 = clazz.getMethod("method1",null);
+        System.out.println(method1.hashCode() == studentMothod.method1().hashCode());
+        System.out.println(method1.hashCode());
+        System.out.println(studentMothod.method1().hashCode());
+
     }
 }
