@@ -15,7 +15,7 @@ ___
 
 增删慢是因为，数组在增删某个元素的时候，在那个位置后面的元素都会被退前或推后，后面的元素越多越慢
 
-ArrayList底层数据结构是数组  
+ArrayList底层数据结构是数组（动态数组）  
 ___
 
 ### **链表：查询慢，增删快**
@@ -68,3 +68,13 @@ ___
 >>LinkedHashSet：有序、无重复、无索引
 >
 >>TreeSet：可排序、无重复、无索引
+
+HashSet: 底层结构（hashmap）哈希表  
+LinkedHashSet：底层结构 数组+双向链表  
+TreeSet：底层结构（treemap）红黑树  
+
+>TreeSet有两种比较方式  
+>>方法一：**默认排序/自然排序**：类实现Comparable接口指定比较规则————Collection\src\A01_TreeSet_1.java  
+>>方法二：**比较器排序**：创建TreeSet对象时传递Comparable制定规则—————Collection\src\A01_TreeSet_2.java  
+>
+>一般使用默认排序就好，方法二一般用在很难改变源码的情况下使用
