@@ -1,4 +1,4 @@
-package javafild;
+package javaclass;
 
 import java.lang.reflect.Method;
 
@@ -19,7 +19,7 @@ class StudentMothod{
 
 public class Methodtest {
     public static void main(String[] args) throws Exception{
-        Class clazz = Class.forName("javafild.StudentMothod");
+        Class clazz = Class.forName("javaclass.StudentMothod");
         
         System.out.println("获取所有方法");
         Method[] methods = clazz.getDeclaredMethods();

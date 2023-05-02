@@ -1,4 +1,4 @@
-package javafild;
+package javaclass;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -31,7 +31,7 @@ class Student{
 public class Fieldtest {
     public static void main(String[] args) throws Exception{
         Student student1 = new Student("abc");
-        Class clazz = Class.forName("javafild.Student");
+        Class clazz = Class.forName("javaclass.Student");
         Constructor constructor = clazz.getConstructor(String.class, int.class, char.class);
         System.out.println(constructor);
         //获取构造方法

@@ -1,8 +1,5 @@
-package javafild;
+package javaclass;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Executable;
-import java.lang.reflect.InvocationTargetException;
-import java.util.jar.Attributes.Name;
 
 class A{
     private String name;
@@ -26,7 +23,7 @@ public class Classtest{
     public static void main(String[] args) throws Exception{
         A a = new A("name",18);
         System.out.println(a.getClass());
-        Class clazz = Class.forName("javafild.A");
+        Class clazz = Class.forName("javaclass.A");
         System.out.println(clazz);
         System.out.println(clazz.equals(a.getClass()));
 
