@@ -77,4 +77,30 @@ TreeSet：底层结构（treemap）红黑树
 >>方法一：**默认排序/自然排序**：类实现Comparable接口指定比较规则————Collection\src\A01_TreeSet_1.java  
 >>方法二：**比较器排序**：创建TreeSet对象时传递Comparable制定规则—————Collection\src\A01_TreeSet_2.java  
 >
->一般使用默认排序就好，方法二一般用在很难改变源码的情况下使用
+>一般使用默认排序就好，方法二一般用在很难改变源码的情况下使用  
+
+# **双列集合Map：**  
+>Map接口  
+> 
+> 实现类：
+>
+>>HashMap：无序、不重复、无索引
+> 
+>>LenkedHashMap：有序、不重复、无索引
+> 
+>>TreeMap：可排序、不重复、无索引
+
+### HashMap:  
+- 底层结构 (Hash)哈希表，在底层数组中存放的是键值对对象（entry）  
+- 依赖hashCode和equals来保证**键**的唯一值  
+- 如果键存储的是自定义对象，需要重写hashCode和equals方法；如果值存储的是自定义对象则不需要
+
+### LenkedHashMap：
+- 底层结构 哈希表 + 双向链表  
+
+### TreeMap:
+- 底层结构 红黑树
+- 可排序：对键进行排序(有默认排序规则，可以自己规定排序规则)
+- 自定义排序规则的两种方法：
+    - 实现Comparable接口
+    - 创建集合时传递Comparator比较器对象
