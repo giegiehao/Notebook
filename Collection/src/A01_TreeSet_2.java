@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.TreeSet;
 
@@ -14,9 +15,10 @@ public class A01_TreeSet_2 {
             return o1.getAge() - o2.getAge();
         });
 
-        ts.add(person1);
-        ts.add(person);
-        ts.add(person2);
+//        ts.add(person1);
+//        ts.add(person);
+//        ts.add(person2);
+        Collections.addAll(ts,person,person1,person2);
         System.out.println(ts);
 
 
