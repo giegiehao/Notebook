@@ -13,7 +13,7 @@ public class ThreadDemo02 {
 }
 
 class Myrun1 implements Runnable{
-    private int count = 1;
+    private int count = 25;
     @Override
     public void run() {
         while (true){
@@ -24,14 +24,15 @@ class Myrun1 implements Runnable{
     //当前方法非static方法，默认锁为this
     //如果方法为static方法，锁为该类的字节码对象（Myrun1.class）
     private synchronized boolean extracted() {
-        if(count <= 100) {
+        if(count > 0) {
                 try {
                     Thread.sleep(300);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println(Thread.currentThread().getName() + "卖出第" + count++ + "张票！！！");
+                System.out.println(Thread.currentThread().getName() + "卖出一张票，还剩" + --count + "张票！！！" );
         }else {
+            System.out.println(Thread.currentThread().getName() + ":票已经售罄！！！");
             return true;
         }
         return false;
