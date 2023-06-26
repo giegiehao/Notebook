@@ -8,6 +8,7 @@ public class A01_TreeSet_2 {
         Person person = new Person("zhansan",18);
         Person person1 = new Person("lisi",19);
         Person person2 = new Person("zhaoliu",20);
+//        Person person3 = new Person("zhaoliu",20);
 
         //创建treeset对象，并传入 comparable对象,设置排序方式
         TreeSet<Person> ts = new TreeSet<>((o1, o2) -> {
@@ -23,7 +24,7 @@ public class A01_TreeSet_2 {
 
 
         //自定义string排列方法
-        String[] stringss = {"abc", "ac", "bc", "aaa", "q"};
+        String[] stringss = {"abc", "ac", "bc", "aaa", "q","q"};
         TreeSet<String> strings = new TreeSet<>((o1, o2) -> {
             int i = o1.length() - o2.length();
             i = i == 0? o1.compareTo(o2) : i;

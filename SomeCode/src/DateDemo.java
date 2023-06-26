@@ -1,7 +1,10 @@
+import javax.xml.crypto.Data;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class DateDemo {
     public static void main(String[] args) {
@@ -18,5 +21,10 @@ public class DateDemo {
         //设置时间样式对象
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy年 MM月 dd日 HH时 mm分 ss秒 EE a");
         System.out.println(zoneldt.format(formatter));
+
+        Date date = new Date();
+        SimpleDateFormat yyyyMMdd = new SimpleDateFormat("yyyyMMdd");
+        System.out.println(yyyyMMdd.format(date));
+        System.out.println(date);
     }
 }

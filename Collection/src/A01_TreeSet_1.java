@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -7,6 +8,7 @@ public class A01_TreeSet_1 {
     public static void main(String[] args) {
         //创建学生对象
         Student student = new Student("zhansan", 18);
+
         Student student1 = new Student("lisi",19);
         Student student2 = new Student("wanwu",20);
         Student student3 = new Student("zhaoliu",18);
@@ -27,6 +29,6 @@ public class A01_TreeSet_1 {
         while (iterable.hasNext()){
             System.out.println(iterable.next());
         }
-        
+        Date date;
     }
 }
