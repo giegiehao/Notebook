@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        {
+
+            /* BOM：浏览器对象模型，允许JavaScript与浏览器对话，JavaScript将浏览器的各个组成部分封装为对象
+               组成：
+               Window：浏览器窗口对象
+               Navigator：浏览器对象
+               Screen：屏幕对象
+               History：历史记录对象
+               Location：地址栏对象’
+                */
+
+            //window对象，表示浏览器窗口
+            // alert()
+
+            // --弹出对话框，--确认：true --取消：false 
+            var flag = confirm("请确认你的操作");
+            alert(flag);
+
+            //定时器：周期性执行某一个函数
+            var i = 0;
+            setInterval(fun => {
+                document.write("fun函数执行正在执行第" + ++i + "次！");
+            }, 1000);//表示每秒执行一次fun函数
+
+            //
+            setTimeout(fun => {
+                document.write("已延迟5秒执行");
+            }, 5000)//表示网页刷新后延迟5秒执行fun函数
+
+            //location对象：地址栏对象
+            alert(location.href);//表示当前地址栏的地址
+            location.href = "https://www.bilibili.com/video/BV1m84y1w7Tb/?p=25&spm_id_from=pageDriver&vd_source=f910f291916244672e3ab84e2dba2c6a";//跳转到该地址
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>string</title>
+</head>
+<body>
+    <script>
+        {
+            var str = new String("hallo wold");
+            var str = " hallo wold ";
+
+            console.log(str.length);//lenth是string的属性，不是函数，不用加括号
+            /* 对于方法后面为什么没有自动补全括号的问题
+                js是弱类型语言，所以的东西都是对象，包括方法也是对象，如果方法不加括号就是对象，表示方法本身，而非方法的运行结果或返回值，可以使用方法对象的方法；
+                加括号表示方法，表示调用这个方法，方法的运行结果或方法的返回值 */
+            console.log(str.charAt(0));//获取索引位置上的一个字符
+            console.log(str.trim())//去除前后空格
+            console.log(str.indexOf("lo"));//检索字符串所在的位置
+
+            var s = str.trim();
+            console.log(s.substring(0,5));//截取从开始下标到n长度的字符串
+            console.log(str.trim().substring(0,5) === s.substring(0,5));
+        }
+    </script>
+</body>
+</html>
