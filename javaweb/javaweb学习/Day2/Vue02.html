@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue v-on</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="functionNum">点击切换按钮函数</button>
+    </div>
+
+    <script>
+        var vue = new Vue({
+            el: "#app",
+            data: {
+                functionNum : function1,
+            },
+            methods: {
+              
+            },
+        })
+
+        function function1() {
+                alert("点击了函数一，以切换到函数二");
+                vue.functionNum = function2;
+              }
+
+        function function2() {
+                alert("点击了函数二，以切换到函数一")
+                vue.functionNum = function1;
+              }
+    </script>
+</body>
+</html>

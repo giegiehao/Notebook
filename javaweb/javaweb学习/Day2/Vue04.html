@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue-for循环</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(item, index) in addres" :key="index">{{index}} : {{item}}</div>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            addres: [1,2,3,4,5]
+        }
+    })
+
+    // vue.addres[5] = 10;没用 为了使 Vue 能够正确地跟踪数组的变化，
+    //建议使用 Vue 提供的数组变异方法（如 push()、pop()、splice() 等），而不是直接修改数组的长度或直接赋值一个新数组。
+    vue.addres.push(6);//可以
+</script>
+</html>
