@@ -19,8 +19,7 @@ public class Main {
 
 
         while (true) {
-            System.out.println("* 第" + (++x) + "项数量及单价：");
-            System.out.print("数量：");
+
 //            try{
 //                quantity = scanner.nextDouble();
 //                System.out.print("单价：");
@@ -34,12 +33,19 @@ public class Main {
 //            }
 
             try {
+                System.out.println("* 第" + (++x) + "项数量及单价：");
+
+                System.out.print("数量：");
                 s = scanner.nextLine();
                 if (s.isEmpty()) s = "1";
+                if (s.endsWith(".")) s.substring(0, s.length() - 1);
                 quantity = new BigDecimal(s);
+
                 System.out.print("单价：");
                 s = scanner.nextLine();
+                if (s.endsWith(".")) s.substring(0, s.length() - 1);
                 unit_price = new BigDecimal(s);
+
                 amount = Main.bigSum(quantity, unit_price);
                 System.out.println("金额：" + amount);
                 sum = sum.add(amount).setScale(scale,roundingMode);
@@ -69,6 +75,7 @@ public class Main {
         System.out.println("欢迎进入账单计算系统");
 
         while (true) {
+            System.out.println("-------------------------------------------------------------");
             System.out.println("第" + (++i) + "张账单");
             System.out.println("总数:" +  Main.summation());
             Thread.sleep(50);
