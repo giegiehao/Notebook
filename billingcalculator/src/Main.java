@@ -18,27 +18,21 @@ public class Main {
 
 
         while (true) {
-            System.out.println("* 第" + (++x) + "项数量及单价：");
-            System.out.print("数量：");
-//            try{
-//                quantity = scanner.nextDouble();
-//                System.out.print("单价：");
-//                unit_price = scanner.nextDouble();
-//                amount = quantity * unit_price;
-//                System.out.println("金额：" + amount);
-//                sum += amount;
-//            } catch (InputMismatchException e){
-//                System.out.println("该账单已结束");
-//                break;
-//            }
 
             try {
+                System.out.println("* 第" + (++x) + "项数量及单价：");
+
+                System.out.print("数量：");
                 s = scanner.nextLine();
                 if (s.isEmpty()) s = "1";
+                else if (s.endsWith(".")) s = s.substring(0, s.length() - 1);
                 quantity = new BigDecimal(s);
+
                 System.out.print("单价：");
                 s = scanner.nextLine();
+                if (s.endsWith(".")) s = s.substring(0, s.length() - 1);
                 unit_price = new BigDecimal(s);
+
                 amount = Main.bigSum(quantity, unit_price);
                 System.out.println("金额：" + amount);
                 sum = sum.add(amount).setScale(scale,roundingMode);

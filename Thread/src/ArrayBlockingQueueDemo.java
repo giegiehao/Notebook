@@ -5,8 +5,8 @@ public class ArrayBlockingQueueDemo {
         /*
         * 阻塞队列：
         * 当该队列不能put或者take之后，相应的线程会进入阻塞状态
-        * ArrayBlockingQueue：底层是数组，有界
-        * LinkedBlockingQueue：底层是链表，无界
+        * ArrayBlockingQueue：底层是数组，有界, 必须定义队列大小
+        * LinkedBlockingQueue：底层是链表，无界, 队列长度可变，容量更大
         * */
 
         ArrayBlockingQueue<String> abq = new ArrayBlockingQueue<>(1);
@@ -30,6 +30,7 @@ class Cook extends Thread{
     public void run() {
         while (true){
             try {
+                Thread.sleep(500);
                 abq.put("面条");
                 System.out.println("做了一碗面条");
             } catch (InterruptedException e) {
@@ -50,6 +51,7 @@ class Foodis extends Thread{
     public void run() {
     while (true){
         try {
+            Thread.sleep(1000);
             abq.take();
             System.out.println("吃货吃了一碗面条");
         } catch (InterruptedException e) {
