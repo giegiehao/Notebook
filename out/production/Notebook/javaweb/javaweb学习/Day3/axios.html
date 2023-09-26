@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>axios网络请求</title>
+    <script src="../axios.js"></script>
+</head>
+<body>
+    <button onclick="getrequest()">get请求</button>
+    <button onclick="postrequest()">post请求</button>
+
+    <script>
+        function getrequest(){ 
+            axios.get("http://127.0.0.1:4523/m1/2977260-0-default/path/index/api").then(res => {
+                console.log(res.data);
+            })
+        }
+            
+        function postrequest(){
+            axios.post("https://www.baidu.com","id = 1").then(res => {
+                console.log(res);
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        //自定义对象
+        var userinfo = {
+            name: "王五",//','分隔属性
+            id: 1,
+            age: 18,
+            address: ["广东", "肇庆", "端州"],
+            //定义方法
+            goSchool() {
+                alert("正在上学");
+            }
+        }
+
+        alert(userinfo.name + ":" + userinfo.address);
+        userinfo.goSchool();
+        alert("userinfo = " + userinfo);//输出[object Object]，表示是一个对象
+
+
+
+        //JSON字符串
+        var json = '{"name":"李四","id":2,"age":18,"address":["广东", "肇庆", "端州"]}';
+
+        //转换为json对象
+        var jsonObj = JSON.parse(json);
+        alert("jsonObj = " + jsonObj);//输出[object Object]，表示是一个对象
+        alert(jsonObj.name);
+        alert(jsonObj.address);
+
+        //将json对象转换为json字符串
+        var jsonStr = JSON.stringify(jsonObj);
+        alert("jsonStr = " + jsonStr);//输出字符串
+
+    </script>
+</body>
+</html>

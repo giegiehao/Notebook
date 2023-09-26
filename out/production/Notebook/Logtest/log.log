@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-21T07:00:14.816913200Z</date>
+  <millis>1682060414816</millis>
+  <nanos>913200</nanos>
+  <sequence>0</sequence>
+  <logger>Logtest.LogTest</logger>
+  <level>INFO</level>
+  <class>Logtest.LogTest</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>this is info</message>
+</record>
+<record>
+  <date>2023-04-21T07:00:14.826886300Z</date>
+  <millis>1682060414826</millis>
+  <nanos>886300</nanos>
+  <sequence>1</sequence>
+  <logger>Logtest.LogTest</logger>
+  <level>INFO</level>
+  <class>Logtest.LogTest</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>数组越界了</message>
+  <exception>
+    <message>java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2</message>
+    <frame>
+      <class>Logtest.LogTest</class>
+      <method>main</method>
+      <line>27</line>
+    </frame>
+  </exception>
+</record>
+</log>

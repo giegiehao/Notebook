@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>事件监听</title>
+</head>
+<body>
+
+    <script>
+
+        function yes(){
+            alert("很好，值得表扬");
+        }
+
+        function no(){
+            alert("请继续努力，坚持就是胜利");
+        }
+
+        //使用标签对象添加事件绑定
+        // document.getElementsByName("repla")[1].onclick = function() {
+        //     no();
+        // }
+        // alert(buttonOn);
+        var buttonNo = document.getElementsByName("repla")[1];
+        buttonNo.onclick = function(){
+            no();
+        }
+    </script>
+
+<h1 id="title" class="center">JS-DOM对象模型</h1>
+<p class="center">是否了解该对象模型</p>
+<!-- onclick 表示监听单击事件绑定属性 -->
+<button name="repla" onclick="yes()">是的</button> 
+<button name="repla" >还没有</button>
+</body>
+</html>

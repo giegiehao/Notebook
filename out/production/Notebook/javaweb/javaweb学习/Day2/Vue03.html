@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>条件判断</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="age">
+        <!-- 条件判断指令：当条件为true时，渲染这个标签 -->
+        <span v-if="age == null">请输入年龄</span>
+        <span v-else-if="age <= 35">年轻人（小于35）</span>
+        <span v-else-if="age > 35 && age < 60">中年人（35~60）</span>
+        <span v-else="age >= 60">老年人（大于60）</span>
+
+        <!-- show 与 判断判断不同，show条件不满足时也会渲染出现在html文件中，但是display值是none，表示不显示 -->
+        <span v-show="age != null">v-show：为true时显示此标签</span>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            age : null
+        }
+    })
+</script>
+</html>

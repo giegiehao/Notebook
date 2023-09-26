@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="center">JS-DOM对象模型</h1>
+    <p class="center">是否了解该对象模型</p>
+    <button name="repla">是的</button>
+    <button name="repla">还没有</button>
+    <script>
+        /* DOM：Document Object Model 文档对象模型
+        将标记语言的各个组成部分封装成对应的对象：
+        Document：文档对象
+        Element：元素对象
+        Attribute：属性对象
+        Text：文本对象
+        Comment：注释对象
+         */
+
+         //获取元素标签对象
+         //使用id获取唯一对象
+         var title = document.getElementById("title");
+        //  alert(title);
+
+         //使用标签获取对象数组
+         var buttons = document.getElementsByTagName("button");
+         document.write(buttons);
+
+         //使用name属性获取对象数组
+         var buttons = document.getElementsByName("repla");
+         document.write(buttons);
+
+         //使用class属性获取对象数组
+         var center = document.getElementsByClassName("center");
+         document.write(center);
+    </script>
+</body>
+</html>
