@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>数据类型</title>
+</head>
+<body>
+    <!-- 基本数据类型 
+        1.number
+        2.string    
+        3.boolean
+        4.null
+        5.undefined 声明的变量未初始化  
+    -->
+
+    <!-- "==" 与"===" 的区别:
+        == ：在比较时会进行类型转换 true条件为 值相同
+        === ：比较时不进行类型转换，true条件为 类型相同 值相同 
+    -->
+
+    <script>
+        {
+            var a = 10;
+            var b = 10;
+            var s = "10";
+
+            document.write(a == b);//true;
+            document.write(a == s);//true;
+            document.write(a === b);//true;
+            document.writeln(a === s);//false;
+
+            document.writeln(a == 10.00);//true
+            document.writeln(a === 10.0);//true
+            document.writeln(a == 10.11);//false
+
+            alert(typeof(a));//number
+            alert(typeof(s));//string
+            alert(typeof(typeof(a)));//string
+            
+            //类型转换
+            //字符串转换为数字类型
+            {
+                alert(parseInt(s));//10
+                alert(parseInt("10A3975f"));//10：将非数字前的数字转换为数字类型，省略非数字后的所有字符
+                alert(parseInt("f275"));//NaN：not a number ：返回值表示不是数字
+            }
+
+            //其它类型转换为boolean
+            if(0){
+                alert("0转换为false");
+            }else if(NaN){
+                alert("NaN转换为false")
+            }else if(-1){
+                alert("除0和NaN转换为false，其它数字均转换为true");
+            }
+
+            if(""){
+                alert("空字符串转换为false");
+            }
+
+            if(null){
+                alert("null转换为false");
+            }
+            if(undefined){
+                alert("undefined转换为false");
+            }
+        }
+
+        /* javascript 流程控制语句与java相同
+            if-else if-else
+            switch
+            while
+            do while
+            for */
+        
+    </script>
+</body>
+</html>

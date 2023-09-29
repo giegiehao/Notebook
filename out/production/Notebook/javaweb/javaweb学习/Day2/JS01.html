@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>变量</title>
+</head>
+<body>
+    <script>
+        // javaScript是弱类型语言，变量可以存放不同的类型
+        
+        /*  var定义变量
+            特点一：作用域范围大(全局变量) 
+            特点二：可以重复定义
+        */
+        var a = 10;
+        var a = 20;//可以重复定义
+        a = "string";//可以存放不同类型
+
+        alert("a = " + a);
+
+        {
+            /* let: 局部变量；不可重复定义 */
+            let b = "bbb"
+            b = 4;//可以存放不同类型
+            // let b = "bbb"; 不可重复定义
+
+            alert(b);
+        }
+
+        {
+            // const ：常量，不可改变；局部变量；
+            const pi = 3.14;
+            // pi = 3.15;//报错:Uncaught TypeError: Assignment to constant variable.未捕获的类型错误：分配给常量变量。
+            alert(pi);
+        }
+
+        // alert(b); let变量作用域外无法使用
+    </script>
+</body>
+</html>

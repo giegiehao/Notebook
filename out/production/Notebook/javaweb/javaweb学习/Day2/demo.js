@@ -1,0 +1,1 @@
+alert('Hallo Word 外部脚本');

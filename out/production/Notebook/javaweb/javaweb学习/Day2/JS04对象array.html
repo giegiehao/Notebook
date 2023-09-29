@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>array</title>
+</head>
+<body>
+    <script>
+        {
+            //array数组：长度可变；可以添加不同类型
+            //定义数组-1
+            var arr = new Array(1 ,2 , 3, 4);
+            //定义数组-2
+            var arr = [1, 2, 3, 4, 5];//与java使用大括号不同，数组使用中括号包围数据d
+
+            //直接在某个位置上添加元素
+            arr[10] = 10;//中间没有赋值的位置上类型为undefined，表示未赋值
+            
+            //在数组最后加上元素
+            arr.push("A");
+            arr.push("B");
+            arr.push(1);
+
+            //删除数组中的元素
+            arr.splice(5, 5);//从下标5开始删n个元素
+
+            //遍历数组
+            //for循环遍历
+            for (let i = 0; i < arr.length; i++) {
+                alert(arr[i]);
+            }
+
+            //foreach遍历：遍历数组中有值的元素
+            arr.forEach(i => {
+                console.log(i);
+            });
+
+
+        }
+    </script>
+</body>
+</html>

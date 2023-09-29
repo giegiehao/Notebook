@@ -5,6 +5,6 @@ public class Test {
         ActionImpl action = new ActionImpl("test");
 
         Action proxyAction = ProxyAction.newProxyAction(action);
-        System.out.println(proxyAction.rest(100000));
+        System.out.println(proxyAction.rest(8000));
     }
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        //定义函数-1
+        function add(a, b){//参数类型可以不用定义，不用表明返回值，可以直接在函数体内返回值
+            return a + b;
+        }
+
+        //定义函数-2
+        var add = function(a, b){//同名函数覆盖
+            return a + b;
+        }
+
+        //函数调用
+        var result = add(2, 20);
+        alert(result);
+    </script>
+</body>
+</html>
